@@ -9,7 +9,8 @@ weatherLocation.addEventListener('submit',(e)=>{
     const location = search.value
     messageContexttwo.textContent =''
     messageContextOne.textContent = 'Loading.....'
-    fetch('http://localhost:8000/weather?address='+location).then((response)=>{
+    //http://localhost:3000
+    fetch('/weather?address='+location).then((response)=>{
         response.json().then((data) => {
             if(data.error)
             {

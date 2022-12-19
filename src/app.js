@@ -8,6 +8,8 @@
     console.log(__dirname)
     console.log(path.join(__dirname,'../public'))
 
+    const port = process.env.PORT || 3000
+
     const publicDirectory = path.join(__dirname,'../public')
     const viewsPath = path.join(__dirname,'../templates/views')
     const partialPath = path.join(__dirname,'../templates/partials')
@@ -112,6 +114,6 @@
         })
     })
 
-    app.listen(8000, () =>{
-        console.log('server is up on port 8000')
+    app.listen(port, () =>{
+        console.log('server is up on port' + port)
     })
